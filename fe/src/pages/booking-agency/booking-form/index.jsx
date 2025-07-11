@@ -170,7 +170,7 @@ export function BookingForm({
           </div>
           <div className="step-navigation">
             <button onClick={prevStep} className="btn-prev">
-              Kembali
+              Sebelumnya
             </button>
             <button className="btn-next" type="submit">
               Selanjutnya
@@ -264,7 +264,7 @@ export function BookingForm({
           </div>
           <div className="step-navigation">
             <button onClick={prevStep} className="btn-prev">
-              Kembali
+              Sebelumnya
             </button>
             <button onClick={nextStep} className="btn-next">
               Lanjut ke Pembayaran
@@ -290,12 +290,12 @@ export function BookingForm({
             Setelah melakukan pembayaran, simpan bukti transfer Anda untuk
             diunggah pada langkah berikutnya.
           </p>
-          <div className="step-navigation">
-            <button onClick={prevStep} className="btn-prev">
-              Kembali
-            </button>
+          <div className="step-navigation" style={{ flexDirection: "column" }}>
             <button onClick={nextStep} className="btn-next">
-              Saya Sudah Bayar
+              Selanjutnya
+            </button>
+            <button onClick={prevStep} className="btn-prev">
+              Sebelumnya
             </button>
           </div>
         </div>
@@ -325,7 +325,7 @@ export function BookingForm({
           </div>
           <div className="step-navigation">
             <button onClick={prevStep} className="btn-prev">
-              Kembali
+              Sebelumnya
             </button>
             <button type="submit" className="btn-submit">
               Selesaikan Pemesanan

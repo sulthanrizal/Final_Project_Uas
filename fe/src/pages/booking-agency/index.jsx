@@ -9,7 +9,7 @@ const BookingAgency = () => {
   const { id } = useParams();
   const navigate = useNavigate();
   const allAgencies = dataAgency.flatMap((group) => group.agencies);
-  const agency = allAgencies.find((_, i) => i === Number(id));
+  const agency = allAgencies.find((_, i) => i === Number(id - 1));
 
   const [currentStep, setCurrentStep] = useState(1);
   const [formData, setFormData] = useState({
@@ -62,7 +62,7 @@ const BookingAgency = () => {
     submissionData.append("paymentProof", formData.paymentProof);
 
     try {
-      const token = localStorage.getItem('token'); // Get token directly from localStorage
+      const token = localStorage.getItem("token"); // Get token directly from localStorage
       console.log("Frontend - Token from localStorage (before fetch):", token);
       const response = await fetch("http://localhost:3000/api/bookings", {
         method: "POST",
