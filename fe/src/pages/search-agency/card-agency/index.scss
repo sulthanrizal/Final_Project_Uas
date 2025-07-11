@@ -4,6 +4,14 @@
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 20px;
+
+  .no-data-message {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+    color: #888;
+  }
 }
 .bottom-card {
   display: flex;

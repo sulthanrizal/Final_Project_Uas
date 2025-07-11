@@ -40,36 +40,56 @@ export function CardAgency({ data }) {
   return (
     <>
       <div className="container-card">
-        <CardItemAgency
-          data={showPagination ? currentItems : data.slice(0, 3)}
-        />
-      </div>
-      <div className="bottom-card">
-        {showPagination && totalPages > 1 && (
-          <div className="pagination">
-            <button
-              onClick={() => paginate(currentPage - 1)}
-              disabled={currentPage === 1}
-            >
-              Previous
-            </button>
-            {renderPageNumbers()}
-            <button
-              onClick={() => paginate(currentPage + 1)}
-              disabled={currentPage === totalPages}
-            >
-              Next
-            </button>
+        {data.length > 0 ? (
+          <CardItemAgency
+            data={showPagination ? currentItems : data.slice(0, 3)}
+          />
+        ) : (
+          <div
+            className="no-data-message"
+            style={{
+              textAlign: "center",
+              height: "50vh",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <p style={{ color: "black" }}>"Agency Tidak Ditemukan"</p>
           </div>
         )}
-        <div className="button-all">
-          {data.length > 3 && (
-            <button className="show-more-button" onClick={handleToggleDisplay}>
-              {showPagination ? "Sembunyikan" : "Lihat Lebih Banyak"}
-            </button>
-          )}
-        </div>
       </div>
+      {data.length > 0 && (
+        <div className="bottom-card">
+          {showPagination && totalPages > 1 && (
+            <div className="pagination">
+              <button
+                onClick={() => paginate(currentPage - 1)}
+                disabled={currentPage === 1}
+              >
+                Previous
+              </button>
+              {renderPageNumbers()}
+              <button
+                onClick={() => paginate(currentPage + 1)}
+                disabled={currentPage === totalPages}
+              >
+                Next
+              </button>
+            </div>
+          )}
+          <div className="button-all">
+            {data.length > 3 && (
+              <button
+                className="show-more-button"
+                onClick={handleToggleDisplay}
+              >
+                {showPagination ? "Sembunyikan" : "Lihat Lebih Banyak"}
+              </button>
+            )}
+          </div>
+        </div>
+      )}
     </>
   );
 }

@@ -8,6 +8,7 @@ import Layout from "./components/Layout";
 import { ProfileAgency } from "./pages/profile-agency";
 import BookingAgency from "./pages/booking-agency";
 import { Register } from "./register/register";
+import { RegisAgency } from "./pages/regis-agency";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/search-agency" element={<SearchAgency />} />
           <Route path="/profile-agency/:id" element={<ProfileAgency />} />
           <Route path="/booking-agency/:id" element={<BookingAgency />} />
+          <Route path="/register-agency" element={<RegisAgency />} />
         </Route>
       </Routes>
     </BrowserRouter>
