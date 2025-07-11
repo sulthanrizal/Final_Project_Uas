@@ -1,0 +1,84 @@
+.section-category {
+  z-index: 2;
+  position: relative;
+  padding-top: 100px;
+  margin-bottom: 500px;
+
+  h1 {
+    font-size: 50px;
+    font-weight: 600;
+    width: max-content;
+    padding: 20px 30px 20px 110px;
+    background: #0a4952;
+    color: white !important;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+  .container-card {
+    position: relative;
+    padding: 0px 65px;
+    .card:hover {
+      background: #0a4952;
+      p {
+        color: white;
+      }
+    }
+    .card {
+      position: absolute;
+      border: 1px solid #0a4952;
+      border-bottom-left-radius: 20px;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+      width: max-content;
+      padding: 30px;
+
+      p {
+        color: black;
+        font-size: 20px;
+        font-weight: 600;
+        color: #0a4952;
+      }
+    }
+    .content-card1 {
+      top: 0;
+      right: 300px;
+    }
+    .content-card2 {
+      top: 80px;
+      right: 600px;
+    }
+    .content-card3 {
+      top: 110px;
+      right: 930px;
+    }
+    .content-card4 {
+      top: 135px;
+      left: 145px;
+    }
+    .content-card5 {
+      top: 248px;
+      right: 633px;
+    }
+    .content-card6 {
+      top: 248px;
+      right: 1020px;
+    }
+    .content-card7 {
+      top: 383px;
+      right: 540px;
+    }
+    .content-card8 {
+      top: 383px;
+      right: 900px;
+    }
+    .content-card9 {
+      top: 383px;
+      right: 1300px;
+    }
+  }
+  .content-img {
+    position: absolute;
+    top: 100px;
+    right: 65px;
+  }
+}

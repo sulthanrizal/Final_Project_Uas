@@ -1,0 +1,36 @@
+:root,
+input::placeholder {
+  font-family: "Poppins";
+}
+* {
+  color: white;
+  margin: 0;
+}
+
+input,
+textarea,
+input::placeholder {
+  color: black;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  line-height: 1;
+}
+
+/* Mobile first */
+@media (max-width: 767px) {
+  /* Add your mobile styles here */
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* Add your tablet styles here */
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  /* Add your desktop styles here */
+}
