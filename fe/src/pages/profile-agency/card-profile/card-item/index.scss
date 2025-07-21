@@ -184,7 +184,7 @@
       }
     }
     .agency-profile__booking-button {
-      background-color: #0a4952;
+      background-color: #25a0b0;
       color: white;
       border: none;
       padding: 15px 20px;
@@ -199,7 +199,7 @@
       transition: background-color 0.3s ease;
 
       &:hover {
-        background-color: #25a0b0;
+        border: 1px solid white;
         cursor: pointer;
       }
     }
